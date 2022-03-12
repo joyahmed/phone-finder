@@ -19,4 +19,32 @@ class UI {
 		});
 		this.phones.innerHTML = output;
 	}
+
+	showAlert(message, className) {
+		this.clearAlert();
+		const div = document.createElement('div');
+		div.className = className;
+		div.className += ' text-red-900 font-bold';
+		div.appendChild(document.createTextNode(message));
+
+		const container = document.querySelector('.searchContainer');
+		const search = document.querySelector('.search');
+		container.insertBefore(div, search);
+
+		setTimeout(() => {
+			this.clearAlert();
+		}, 3000);
+	}
+
+	clearAlert() {
+		const currentAlert = document.querySelector('.alert');
+
+		if (currentAlert) {
+			currentAlert.remove();
+		}
+	}
+
+	clearPhone() {
+		this.phones.innerHTML = '';
+	}
 }
