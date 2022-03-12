@@ -1,3 +1,5 @@
+const ui = new UI();
+
 const searchPhone = document.getElementById('searchPhone');
 
 searchPhone.addEventListener('keyup', e => {
@@ -6,7 +8,7 @@ searchPhone.addEventListener('keyup', e => {
 	if (phoneName !== '') {
 		getPhone(phoneName).then(p => {
 			if (p.status) {
-				console.log(p.data, p.status);
+				ui.showPhones(p.data, p.length);
 			}
 		});
 	}
