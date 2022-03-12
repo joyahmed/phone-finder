@@ -10,9 +10,36 @@
 </head>
 
 <body>
+  <div class="flex flex-col items-center justify-between min-h-screen w-full">
+    <nav class="flex items-center justify-start bg-blue-400 h-14 w-full">
+      <a href="#" class="text-lg font-bold text-white px-8">Phone Hunter</a>
+    </nav>
 
-  <div class="bg-gray-400">Phone Hunter</div>
-  <script src="index.js"></script>
+
+    <div class="flex flex-col container max-w-7xl items-center justify-center searchContainer">
+
+      <div class="search"></div>
+
+      <div class="flex justify-center w-1/3 bg-gray-100 rounded-lg my-2 py-2">
+        <h1 class="text-lg font-semibold text-gray-600">Search by Phone Name</h1>
+      </div>
+
+      <div class="flex w-1/3 bg-gray-100 rounded-lg my-2 py-2">
+        <input id="searchPhone" type="text" class="px-2 w-full bg-gray-100 outline-none" placeholder="Type Phone Name">
+      </div>
+    </div>
+
+    <div id="phones" class="flex flex-col max-w-7xl items-center justify-between"></div>
+
+
+
+    <footer class="flex items-center justify-center bg-blue-400 h-14 w-full">
+      <a href="#" class="text-lg font-semibold text-white px-8">Tony Rahmat</a>
+    </footer>
+  </div>
+
+  <script src="ui.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
